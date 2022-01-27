@@ -320,16 +320,23 @@
     </li>
   </ul>
 </nav>
-<div class="container">
-  <br>
-  <h2 style="text-align: center;">{{title}}</h2>
-  <hr>
-  <div class="card">
-    <div class="card-body">
-      <router-outlet></router-outlet>
+{{localStorage}}
+<div *ngIf="currentUserSubject; else logined">
+  <app-login></app-login>
+</div>
+
+<ng-template #logined>
+  <div class="container">
+    <br>
+    <h2 style="text-align: center;">{{title}}</h2>
+    <hr>
+    <div class="card">
+      <div class="card-body">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-</div>
+</ng-template>
 
 <footer class="footer">
   <div class="container">

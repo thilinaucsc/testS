@@ -4,12 +4,14 @@ import { GetAllInterestComponent } from './components/get-all-interest/get-all-i
 import { GetCustomerInterestComponent } from './components/get-customer-interest/get-customer-interest.component';
 import { GetLastInterestComponent } from './components/get-last-interest/get-last-interest.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {LoginComponent} from "./components/login/login.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full', component: DashboardComponent },
   { path: 'get-all', component: GetAllInterestComponent },
   { path: 'get-customer', component: GetCustomerInterestComponent },
-  { path: 'get-last', component: GetLastInterestComponent }
+  { path: 'get-last', component: GetLastInterestComponent },
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
